@@ -102,6 +102,7 @@ DEVICE_PACKAGE_OVERLAYS += \
 # Custom Overlays
 # Navbar
 PRODUCT_PACKAGES += \
+    GesturalNavigationOverlayHidden \
     GesturalNavigationOverlayLong \
     GesturalNavigationOverlayMedium
 
