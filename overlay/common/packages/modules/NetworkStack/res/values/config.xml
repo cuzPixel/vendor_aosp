@@ -22,4 +22,8 @@
          this resource. It will break if the enforcement of overlayable starts.
          -->
     <string name="default_captive_portal_https_url" translatable="false">https://connect.rom.miui.com/generate_204</string>
+
+    <!-- Configuration for including DHCP client hostname option -->
+    <bool name="config_dhcp_client_hostname">true</bool>
+
 </resources>
