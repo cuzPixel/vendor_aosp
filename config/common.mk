@@ -127,16 +127,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
 
-# Audio
-$(call inherit-product, vendor/aosp/config/audio.mk)
-
-# Bootanimation
-$(call inherit-product, vendor/aosp/config/bootanimation.mk)
-
-# Fonts
-$(call inherit-product, vendor/aosp/config/fonts.mk)
-
 # GApps
-$(call inherit-product, vendor/gapps/gapps.mk)
+$(call inherit-product, vendor/gapps/aosp_gms.mk)
 
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
