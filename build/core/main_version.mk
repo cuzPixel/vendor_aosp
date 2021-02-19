@@ -18,7 +18,7 @@ ADDITIONAL_BUILD_PROPERTIES += \
 endif
 
 # Branding
-CUSTOM_BUILD_TYPE ?= beta
+CUSTOM_ROM_VERSION ?= 11.2.1
 
 CUSTOM_DATE_YEAR := $(shell date -u +%Y)
 CUSTOM_DATE_MONTH := $(shell date -u +%m)
@@ -29,10 +29,11 @@ CUSTOM_VERSION_PROP := 11.0
 
 TARGET_PRODUCT_SHORT := $(subst aosp_,,$(CUSTOM_BUILD))
 
-CUSTOM_VERSION := cuzPixel-$(CUSTOM_VERSION_PROP)-$(CUSTOM_BUILD_DATE)-$(CUSTOM_BUILD)-$(CUSTOM_BUILD_TYPE)
+CUSTOM_VERSION := cuzPixel-$(CUSTOM_VERSION_PROP)-$(CUSTOM_BUILD_DATE)-$(CUSTOM_BUILD)-v$(CUSTOM_ROM_VERSION)
 
 ADDITIONAL_BUILD_PROPERTIES += \
     org.cuzpixel.version=$(CUSTOM_VERSION_PROP) \
+    org.cuzpixel.version.custom=$(CUSTOM_ROM_VERSION) \
     org.cuzpixel.version.display=$(CUSTOM_VERSION) \
     org.cuzpixel.build_date=$(CUSTOM_BUILD_DATE) \
-    org.cuzpixel.build_type=$(CUSTOM_BUILD_TYPE)
+    org.cuzpixel.build_type=$(TARGET_BUILD_VARIANT)
